@@ -19,7 +19,7 @@ To install it you simply need to download the binary.
 
 Note: Replace darwin, with your preferred platform, like linux for example. Windows binary also available.
 ```shell
-curl https://github.com/0x111/serve-wasm/releases/download/v0.1/serve-wasm-darwin-amd64 -o /usr/local/bin/serve-wasm
+curl https://github.com/0x111/serve-wasm/releases/download/v0.1/serve-wasm-darwin-amd64 -L -s -o /usr/local/bin/serve-wasm
 chmod +x /usr/local/bin/serve-wasm
 serve-wasm -version # prints serve-wasm v0.1
 ```
