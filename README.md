@@ -1,18 +1,14 @@
-# serve-wasm
-A simple zero-dependency webserver to serve static files with wasm binary file served with the correct mime type.
+# http-server
 
-Try your wasm binary locally. There is a lack of support for serving the correct mime type for WASM binaries.
+Attention: This is a work in progress.
+
+A simple zero-dependency webserver to serve static files also wasm binaries with the correct mime type.
+There is a lack of support for serving the correct mime type for WASM binaries.
 
 This package is here to help you with that, you can simply install it by downloading the binary from releases for any platform or compiling from source!
-The package makes it easy to test your binary locally instead of resorting to various hacks. A drop in replacement, no installation needed!
+The package makes it easy to test your binary locally instead of resorting to various hacks. I will try to implement this in par with the [http-server](https://www.npmjs.com/package/http-server) package to provide full compatibility.
 
-I was using `http-server` node package in the past, but this does not serve wasm files with the `application/wasm` mime type.
-
-The builtin golang types already do this for us, so this is a really minimalistic sample that I use for personal development.
-
-This is not something groundbreaking, but makes things easier, I've seen many tutorials on how to modify python's builtin webserver to pass proper type and etc.
-
-This is a download and use solution, nothing else needed really.
+This is not intended for production use, only for development and testing.
 
 ## Install
 To install it you simply need to download the binary.
@@ -25,7 +21,7 @@ serve-wasm -version # prints serve-wasm v0.1
 ```
 
 ## Usage
-The app accepts two parameters, `-path` and `-host`.
+The app right now accepts two parameters, `-path` and `-host`.
 
 If you leave out the parameters, the defaults are listening on `localhost:8080` and serving the current directory `.`.
 ```shell
@@ -39,4 +35,4 @@ serve-wasm -host=localhost:9090 -path=./static
 # Listening on localhost:9090 and serving path ./static
 ```
 
-Now you can test your wasm binary also locally. This app is opinionated, not intended for production use and it is simply a tool for personal use but maybe someone can have a use for it!
+This is strictly opinionated and it will likely stay as-is for the foreseable future.
