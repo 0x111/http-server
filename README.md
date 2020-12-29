@@ -15,9 +15,9 @@ To install it you simply need to download the binary.
 
 Note: Replace darwin, with your preferred platform, like linux for example. Windows binary also available.
 ```shell
-curl https://github.com/0x111/serve-wasm/releases/download/v0.1/serve-wasm-darwin-amd64 -L -s -o /usr/local/bin/serve-wasm
-chmod +x /usr/local/bin/serve-wasm
-serve-wasm -version # prints serve-wasm v0.1
+curl https://github.com/0x111/serve-wasm/releases/download/v0.1/serve-wasm-darwin-amd64 -L -s -o /usr/local/bin/http-server
+chmod +x /usr/local/bin/http-server
+http-server -version # prints http-server v0.1
 ```
 
 ## Usage
@@ -25,13 +25,13 @@ The app right now accepts two parameters, `-path` and `-host`.
 
 If you leave out the parameters, the defaults are listening on `localhost:8080` and serving the current directory `.`.
 ```shell
-serve-wasm 
+http-server
 # Listening on localhost:8080 and serving path .
 ```
 
 In any other case, you can specify a static folder and for example the port 9090 still listening on localhost.
 ```shell
-serve-wasm -host=localhost:9090 -path=./static
+http-server -host=localhost:9090 -path=./static
 # Listening on localhost:9090 and serving path ./static
 ```
 
