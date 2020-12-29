@@ -18,7 +18,7 @@ func main() {
 	flag.Parse()
 
 	if *version {
-		fmt.Printf("serve-wasm %s\n", appVersion)
+		fmt.Printf("http-server %s\n", appVersion)
 		return
 	}
 
