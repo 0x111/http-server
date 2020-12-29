@@ -1,37 +1,49 @@
-## Welcome to GitHub Pages
+## nhttp - a simple webserver for your development needs
 
-You can use the [editor on GitHub](https://github.com/0x111/http-server/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Attention: This is a work in progress.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+A simple zero-dependency webserver. I present you [nhttp](https://nhttp.org)
+You can use this, to serve static files also wasm binaries with the correct mime type or use it for testing as a simple web server.
+There is a lack of support for serving the correct mime type for WASM binaries. (at the time of writing of this README, for example nodejs http-server does not serve wasm binaries correctly)
 
-### Markdown
+This app is here to help you with that, you can simply install it by downloading the binary from releases for any platform or compiling from source!
+The package makes it easy to have a webserver locally, testing your WASM binary for example instead of resorting to various hacks. I will try to implement this in par with the [http-server](https://www.npmjs.com/package/http-server) package to provide full compatibility.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+This is not intended for production use, only for development and testing.
 
-```markdown
-Syntax highlighted code block
+## Install
+To install it you simply need to download the binary.
 
-# Header 1
-## Header 2
-### Header 3
+Note: Replace darwin, with your preferred platform, like linux for example. Windows binary also available.
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+### macOS
+```shell
+curl https://github.com/0x111/serve-wasm/releases/download/v0.1/serve-wasm-darwin-amd64 -L -s -o /usr/local/bin/http-server
+chmod +x /usr/local/bin/http-server
+http-server -version # prints http-server v0.1
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Linux
+```shell
+curl https://github.com/0x111/serve-wasm/releases/download/v0.1/serve-wasm-linux-amd64 -L -s -o /usr/local/bin/http-server
+chmod +x /usr/local/bin/http-server
+http-server -version # prints http-server v0.1
+```
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/0x111/http-server/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Usage
+The app right now accepts two parameters, `-path` and `-host`.
 
-### Support or Contact
+If you leave out the parameters, the defaults are listening on `localhost:8080` and serving the current directory `.`.
+```shell
+http-server
+# Listening on localhost:8080 and serving path .
+```
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+In any other case, you can specify a static folder and for example the port 9090 still listening on localhost.
+```shell
+http-server -host=localhost:9090 -path=./static
+# Listening on localhost:9090 and serving path ./static
+```
+
+This is strictly opinionated and it will likely stay as-is for the foreseable future.
