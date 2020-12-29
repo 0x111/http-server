@@ -15,11 +15,21 @@ This is not intended for production use, only for development and testing.
 To install it you simply need to download the binary.
 
 Note: Replace darwin, with your preferred platform, like linux for example. Windows binary also available.
+
+### macOS
 ```shell
 curl https://github.com/0x111/serve-wasm/releases/download/v0.1/serve-wasm-darwin-amd64 -L -s -o /usr/local/bin/http-server
 chmod +x /usr/local/bin/http-server
 http-server -version # prints http-server v0.1
 ```
+
+### Linux
+```shell
+curl https://github.com/0x111/serve-wasm/releases/download/v0.1/serve-wasm-linux-amd64 -L -s -o /usr/local/bin/http-server
+chmod +x /usr/local/bin/http-server
+http-server -version # prints http-server v0.1
+```
+
 
 ## Usage
 The app right now accepts two parameters, `-path` and `-host`.
