@@ -1,8 +1,8 @@
-# http-server
+# nhttp
 
 Attention: This is a work in progress.
 
-A simple zero-dependency webserver. 
+A simple zero-dependency webserver. I present you [nhttp](https://nhttp.org)
 You can use this, to serve static files also wasm binaries with the correct mime type or use it for testing as a simple web server.
 There is a lack of support for serving the correct mime type for WASM binaries. (at the time of writing of this README, for example nodejs http-server does not serve wasm binaries correctly)
 
