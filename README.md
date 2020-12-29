@@ -4,7 +4,7 @@ Attention: This is a work in progress.
 
 A simple zero-dependency webserver. 
 You can use this, to serve static files also wasm binaries with the correct mime type or use it for testing as a simple web server.
-There is a lack of support for serving the correct mime type for WASM binaries.
+There is a lack of support for serving the correct mime type for WASM binaries. (at the time of writing of this README, for example nodejs http-server does not serve wasm binaries correctly)
 
 This app is here to help you with that, you can simply install it by downloading the binary from releases for any platform or compiling from source!
 The package makes it easy to have a webserver locally, testing your WASM binary for example instead of resorting to various hacks. I will try to implement this in par with the [http-server](https://www.npmjs.com/package/http-server) package to provide full compatibility.
