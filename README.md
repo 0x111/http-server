@@ -18,14 +18,14 @@ Note: Replace darwin, with your preferred platform, like linux for example. Wind
 
 ### macOS
 ```shell
-curl https://github.com/0x111/serve-wasm/releases/download/v0.1/serve-wasm-darwin-amd64 -L -s -o /usr/local/bin/http-server
+curl https://github.com/0x111/nhttp/releases/download/v0.1/nhttp-darwin-amd64 -L -s -o /usr/local/bin/nhttp
 chmod +x /usr/local/bin/http-server
 http-server -version # prints http-server v0.1
 ```
 
 ### Linux
 ```shell
-curl https://github.com/0x111/serve-wasm/releases/download/v0.1/serve-wasm-linux-amd64 -L -s -o /usr/local/bin/http-server
+curl https://github.com/0x111/nhttp/releases/download/v0.1/nhttp-linux-amd64 -L -s -o /usr/local/bin/nhttp
 chmod +x /usr/local/bin/http-server
 http-server -version # prints http-server v0.1
 ```
