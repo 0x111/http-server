@@ -18,7 +18,7 @@ func main() {
 	flag.Parse()
 
 	if *version {
-		fmt.Printf("http-server %s\n", appVersion)
+		fmt.Printf("nhttp %s\n", appVersion)
 		return
 	}
 

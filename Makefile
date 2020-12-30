@@ -1,4 +1,4 @@
-binary_name = serve-wasm
+binary_name = nhttp
 
 .PHONY: all
 all: linux_amd64 darwin_amd64 windows_amd64 checksums
