@@ -19,15 +19,15 @@ Note: Replace darwin, with your preferred platform, like linux for example. Wind
 ### macOS
 ```shell
 curl https://github.com/0x111/nhttp/releases/download/v0.1/nhttp-darwin-amd64 -L -s -o /usr/local/bin/nhttp
-chmod +x /usr/local/bin/http-server
-http-server -version # prints http-server v0.1
+chmod +x /usr/local/bin/nhttp
+nhttp -version # prints http-server v0.1
 ```
 
 ### Linux
 ```shell
 curl https://github.com/0x111/nhttp/releases/download/v0.1/nhttp-linux-amd64 -L -s -o /usr/local/bin/nhttp
-chmod +x /usr/local/bin/http-server
-http-server -version # prints http-server v0.1
+chmod +x /usr/local/bin/nhttp
+nhttp -version # prints http-server v0.1
 ```
 
 
@@ -36,13 +36,13 @@ The app right now accepts two parameters, `-path` and `-host`.
 
 If you leave out the parameters, the defaults are listening on `localhost:8080` and serving the current directory `.`.
 ```shell
-http-server
+nhttp
 # Listening on localhost:8080 and serving path .
 ```
 
 In any other case, you can specify a static folder and for example the port 9090 still listening on localhost.
 ```shell
-http-server -host=localhost:9090 -path=./static
+nhttp -host=localhost:9090 -path=./static
 # Listening on localhost:9090 and serving path ./static
 ```
 
