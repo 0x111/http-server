@@ -2,7 +2,9 @@
 
 Attention: This is a work in progress.
 
-A simple zero-dependency webserver. I present you [nhttp](https://nhttp.org)
+A simple zero-configuration and zero-dependency webserver. I present you [nhttp](https://nhttp.org)
+You do not need to install any packages except of downloading one binary and using it right away!
+nhttp uses the internal net/http for serving the files. Other than that, we rely on 3rd party implementations for compressions.
 You can use this, to serve static files also wasm binaries with the correct mime type or use it for testing as a simple web server.
 There is a lack of support for serving the correct mime type for WASM binaries. (at the time of writing of this README, for example nodejs http-server does not serve wasm binaries correctly)
 
@@ -30,9 +32,16 @@ chmod +x /usr/local/bin/nhttp
 nhttp -version # prints nhttp v0.1
 ```
 
-
 ## Usage
 The app right now accepts two parameters, `-path` and `-host`.
+
+`-gzip` if set, it will serve content with a gzip encoding, turned off by default
+
+`-host` if set, you can set the listen host, default is `localhost`
+
+`-port` you can set the port to listen on, default is `8080`
+
+`-version` prints version information
 
 If you leave out the parameters, the defaults are listening on `localhost:8080` and serving the current directory `.`.
 ```shell
@@ -42,7 +51,7 @@ nhttp
 
 In any other case, you can specify a static folder and for example the port 9090 still listening on localhost.
 ```shell
-nhttp -host=localhost:9090 -path=./static
+nhttp -host localhost -port 9090 -path=./static
 # Listening on localhost:9090 and serving path ./static
 ```
 
