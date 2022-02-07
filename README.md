@@ -20,26 +20,35 @@ Note: Replace darwin, with your preferred platform, like linux for example. Wind
 
 ### macOS
 ```shell
-curl https://github.com/0x111/nhttp/releases/download/v0.1/nhttp-darwin-amd64 -L -s -o /usr/local/bin/nhttp
+curl https://github.com/0x111/nhttp/releases/download/v0.2/nhttp-darwin-amd64 -L -s -o /usr/local/bin/nhttp
 chmod +x /usr/local/bin/nhttp
-nhttp -version # prints nhttp v0.1
+nhttp -version # prints nhttp v0.1.1
 ```
 
 ### Linux
 ```shell
-curl https://github.com/0x111/nhttp/releases/download/v0.1/nhttp-linux-amd64 -L -s -o /usr/local/bin/nhttp
+curl https://github.com/0x111/nhttp/releases/download/v0.2/nhttp-linux-amd64 -L -s -o /usr/local/bin/nhttp
 chmod +x /usr/local/bin/nhttp
-nhttp -version # prints nhttp v0.1
+nhttp -version # prints nhttp v0.1.1
 ```
 
+### Windows
+Download the latest version of the exe from the [Releases](https://github.com/0x111/nhttp/releases) tab.
+
 ## Usage
-The app right now accepts two parameters, `-path` and `-host`.
+The app right now accepts the parameters below.
 
 `-gzip` if set, it will serve content with a gzip encoding, turned off by default
 
 `-host` if set, you can set the listen host, default is `localhost`
 
 `-port` you can set the port to listen on, default is `8080`
+
+`-spa` if set, the app will host index.html whenever no file is found. You can set your own path of the static directory and the index.html file within it.
+
+`-staticPath` a path to the static folder, default is the current directory i.e. empty
+
+`-indexPath` a path to the index file, within the set `-staticPath`, default is `index.html`
 
 `-version` prints version information
 
@@ -55,4 +64,4 @@ nhttp -host localhost -port 9090 -path=./static
 # Listening on localhost:9090 and serving path ./static
 ```
 
-This is strictly opinionated and it will likely stay as-is for the foreseable future.
+This is strictly opinionated for now and it will likely stay as-is for the foreseable future.
